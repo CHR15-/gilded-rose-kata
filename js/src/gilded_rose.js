@@ -1,5 +1,6 @@
 var MAX_QUALITY = 50;
 var MIN_QUALITY = 0;
+var LEGENDARY_QUALITY = 80;
 var DEGRADATION_RATE = 1;
 
 function Item(name, sell_in, quality) {
