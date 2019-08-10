@@ -38,6 +38,10 @@ function AgedBrie(item) {
 
 function LegendaryItem(item) {
   RegularItem.call(this, item);
+
+  this.updateQuality = function() {
+    return LEGENDARY_QUALITY;
+  }
 }
 
 function BackstagePasses(item) {
