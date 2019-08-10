@@ -89,5 +89,7 @@ function itemWrapper(item) {
 var items = [];
 
 function update_quality() {
-
+  items = items.map(function(item) {
+    return itemWrapper(item);
+  });
 }
