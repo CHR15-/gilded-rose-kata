@@ -72,7 +72,15 @@ function ConjuredItem(item) {
     if (this.quality > 50) return MAX_QUALITY;
     return eopQuality;
   }
+}
 
+function itemWrapper(item) {
+  switch(item.name) {
+    case 'Aged Brie':
+      return new AgedBrie(item);
+    case 'Sulfuras, Hand of Ragnaros':
+      return new LegendaryItem(item);
+  }
 }
 
 function update_quality() {
