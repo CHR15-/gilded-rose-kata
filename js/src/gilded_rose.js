@@ -65,6 +65,12 @@ function BackstagePasses(item) {
 
 function ConjuredItem(item) {
   RegularItem.call(this, item);
+
+  this.updateQuality = function() {
+    var eopQuality = this.sell_in < 0 ? this.quality -= DEGRADATION_RATE * 4 : this.quality -= DEGRADATION_RATE * 2;
+    return eopQuality;
+  }
+
 }
 
 function update_quality() {
