@@ -6,6 +6,7 @@ class Legendary extends RegularItem {
     super(name, sellIn, LEGENDARY_QUALITY)
   }
 
+  // a legendary item's quality is 80 and it never alters
   updateQuality() {
     return LEGENDARY_QUALITY;
   }
