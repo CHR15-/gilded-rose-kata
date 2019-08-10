@@ -2,8 +2,8 @@ import RegularItem from "./RegularItem";
 import { DEGRADATION_RATE, MAX_QUALITY } from '../constants';
 
 class AgedBrie extends RegularItem {
-  constructor(name, sellIn, quality){
-    super('Aged Brie', sellIn, quality)
+  constructor(name, sellIn, quality) {
+    super(name, sellIn, quality)
   }
 
   updateQuality() {

@@ -2,7 +2,7 @@ import Item from './Item';
 import { DEGRADATION_RATE, MAX_QUALITY, MIN_QUALITY } from '../constants';
 
 class RegularItem extends Item {
-  constructor(name, sellIn, quality){
+  constructor(name, sellIn, quality) {
     super(name, sellIn, quality)
   }
 
