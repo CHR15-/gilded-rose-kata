@@ -1,4 +1,4 @@
-describe("AAged Brie tests", function() {
+describe("Aged Brie tests", function() {
 
   it("Item should declare all field", function() {
     items = [ new Item("Aged Brie", 0, 0) ];
