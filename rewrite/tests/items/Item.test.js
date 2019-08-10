@@ -1,3 +1,4 @@
+import Item from '../../src/items/Item';
 import { MAX_QUALITY, MIN_QUALITY } from '../../src/constants';
 
 describe('Initialise Item', () => {
