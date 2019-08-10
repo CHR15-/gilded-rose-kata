@@ -92,4 +92,8 @@ function update_quality() {
   items = items.map(function(item) {
     return itemWrapper(item);
   });
+
+  for(i = 0; i < items.length; i++) {
+    items[i].updateItem();
+  }
 }
