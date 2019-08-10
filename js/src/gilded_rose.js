@@ -8,6 +8,11 @@ var items = []
 
 function RegularItem(item) {
   Item.call(this, item.name, item.sell_in, item.quality);
+
+  this.updateItem = function() {
+    this.quality = this.updateQuality();
+    this.sell_in -= 1;
+  }
 }
 
 function AgedBrie(item) {
