@@ -9,8 +9,6 @@ function Item(name, sell_in, quality) {
   this.quality = quality;
 }
 
-var items = []
-
 function RegularItem(item) {
   Item.call(this, item.name, item.sell_in, item.quality);
 
@@ -86,6 +84,8 @@ function itemWrapper(item) {
       return (item.name.indexOf('Conjured') !== -1) ? new ConjuredItem(item) : new RegularItem(item);
   }
 }
+
+var items = [];
 
 function update_quality() {
   for (var i = 0; i < items.length; i++) {
