@@ -1,3 +1,7 @@
+var MAX_QUALITY = 50;
+var MIN_QUALITY = 0;
+var DEGRADATION_RATE = 1;
+
 function Item(name, sell_in, quality) {
   this.name = name;
   this.sell_in = sell_in;
@@ -8,6 +12,13 @@ var items = []
 
 function RegularItem(item) {
   Item.call(this, item.name, item.sell_in, item.quality);
+
+  this.updateQuality = function() {
+    var eopQuality = this.sell_in < 0 ? this.quality -= DEGRADATION_RATE * 2 : this.quality -= DEGRADATION_RATE;
+    if (this.quality < 0) return MIN_QUALITY;
+    if (this.quality > 50) return MAX_QUALITY;
+    return eopQuality;
+  }
 
   this.updateItem = function() {
     this.quality = this.updateQuality();
