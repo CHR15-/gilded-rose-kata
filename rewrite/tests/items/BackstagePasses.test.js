@@ -36,4 +36,33 @@ describe('Item quality behaviour', () => {
     expect(item.quality).toEqual(5);
   });
 
+  test(`Pass quality can never be more than ${MAX_QUALITY}`, () => {
+    // Quality increases by 2 when there are 10 days or less
+    const item = new BackstagePasses(6, 47);
+
+    item.updateQuality();
+    item.updateSellIn();
+    expect(item.sellIn).toEqual(5);
+    expect(item.quality).toEqual(49);
+
+    // Quality increases by 3 when there are 5 days or less
+    item.updateQuality();
+    item.updateSellIn();
+    expect(item.sellIn).toEqual(4);
+    expect(item.quality).toEqual(MAX_QUALITY);
+  });
+
+  test('Passes are worthless after a concert finishes', () => {
+    // Selling passes on the day of the concert
+    const item = new BackstagePasses(0, 10);
+
+    item.updateQuality();
+    expect(item.quality).toEqual(13);
+    item.updateSellIn();
+
+    // Next day after concert has finished (it was awesome btw!)
+    expect(item.sellIn).toEqual(-1);
+    item.updateQuality();
+    expect(item.quality).toEqual(MIN_QUALITY);
+  });
 });
