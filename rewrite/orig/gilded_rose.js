@@ -1,8 +1,3 @@
-/*
-  I have left the goblins class (looks more like a function to me but don't tell him!)
-  very much alone. He can keep it and it will never change. Looking at the spec however,
-  The InnKeeper hasn't specified about actually using the class, just not to touch it :)
-*/
 function Item(name, sell_in, quality) {
   this.name = name;
   this.sell_in = sell_in;
