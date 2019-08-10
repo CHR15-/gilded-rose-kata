@@ -1,3 +1,4 @@
+import LegendaryItem from '../../src/items/Legendary';
 import { LEGENDARY_QUALITY } from '../../src/constants';
 
 
