@@ -46,6 +46,21 @@ function LegendaryItem(item) {
 
 function BackstagePasses(item) {
   RegularItem.call(this, item);
+
+  this.updateQuality = function() {
+    if (this.sell_in < 0) {
+      return MIN_QUALITY;
+    }
+
+    if (this.quality < MAX_QUALITY) {
+      if (this.sell_in <= 5) {
+        return this.quality <= 47 ? this.quality += 3 : MAX_QUALITY;
+      } else if (this.sell_in <= 10) {
+        return this.quality <= 48 ? this.quality += 2 : MAX_QUALITY;
+      }
+      return this.quality += DEGRADATION_RATE;
+    }
+  }
 }
 
 function ConjuredItem(item) {
