@@ -1,3 +1,4 @@
+import BackstagePasses from '../../src/items/BackstagePasses';
 import { MAX_QUALITY, MIN_QUALITY } from '../../src/constants';
 
 describe('Initialise Item', () => {
