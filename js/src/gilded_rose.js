@@ -29,6 +29,11 @@ function RegularItem(item) {
 
 function AgedBrie(item) {
   RegularItem.call(this, item);
+
+  this.updateQuality = function() {
+    if (this.quality < MAX_QUALITY) return this.quality += DEGRADATION_RATE;
+    return MAX_QUALITY;
+  }
 }
 
 function LegendaryItem(item) {
