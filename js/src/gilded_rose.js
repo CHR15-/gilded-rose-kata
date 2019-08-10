@@ -3,6 +3,7 @@ var MIN_QUALITY = 0;
 var LEGENDARY_QUALITY = 80;
 var DEGRADATION_RATE = 1;
 
+// Don't touch this or get 1 deaged.
 function Item(name, sell_in, quality) {
   this.name = name;
   this.sell_in = sell_in;
@@ -88,49 +89,5 @@ function itemWrapper(item) {
 var items = [];
 
 function update_quality() {
-  for (var i = 0; i < items.length; i++) {
-    if (items[i].name != 'Aged Brie' && items[i].name != 'Backstage passes to a TAFKAL80ETC concert') {
-      if (items[i].quality > 0) {
-        if (items[i].name != 'Sulfuras, Hand of Ragnaros') {
-          items[i].quality = items[i].quality - 1
-        }
-      }
-    } else {
-      if (items[i].quality < 50) {
-        items[i].quality = items[i].quality + 1
-        if (items[i].name == 'Backstage passes to a TAFKAL80ETC concert') {
-          if (items[i].sell_in < 11) {
-            if (items[i].quality < 50) {
-              items[i].quality = items[i].quality + 1
-            }
-          }
-          if (items[i].sell_in < 6) {
-            if (items[i].quality < 50) {
-              items[i].quality = items[i].quality + 1
-            }
-          }
-        }
-      }
-    }
-    if (items[i].name != 'Sulfuras, Hand of Ragnaros') {
-      items[i].sell_in = items[i].sell_in - 1;
-    }
-    if (items[i].sell_in < 0) {
-      if (items[i].name != 'Aged Brie') {
-        if (items[i].name != 'Backstage passes to a TAFKAL80ETC concert') {
-          if (items[i].quality > 0) {
-            if (items[i].name != 'Sulfuras, Hand of Ragnaros') {
-              items[i].quality = items[i].quality - 1
-            }
-          }
-        } else {
-          items[i].quality = items[i].quality - items[i].quality
-        }
-      } else {
-        if (items[i].quality < 50) {
-          items[i].quality = items[i].quality + 1
-        }
-      }
-    }
-  }
+
 }
