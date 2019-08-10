@@ -1,0 +1,33 @@
+.DS_Store
+node_modules/
+dist/
+tests-dist/
+coverage/
+typings/
+
+# IDEs
+.idea/
+.vscode/
+
+# TypeScrit temporary/cache files
+**/.baseDir.ts
+**/.tscache/
+tscommand-*.tmp.txt
+
+# npm
+npm-debug.log*
+.npm_cache
+
+# vim swap files
+*.sw*
+
+*.log
+*.tgz
+
+# pyc files
+*.pyc
+
+# User pool/QA files
+.env.pools
+testing/cognitopools/*
+venv
