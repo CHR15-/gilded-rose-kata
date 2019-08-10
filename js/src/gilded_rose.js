@@ -6,6 +6,26 @@ function Item(name, sell_in, quality) {
 
 var items = []
 
+function RegularItem(item) {
+  Item.call(this, item.name, item.sell_in, item.quality);
+}
+
+function AgedBrie(item) {
+  RegularItem.call(this, item);
+}
+
+function LegendaryItem(item) {
+  RegularItem.call(this, item);
+}
+
+function BackstagePasses(item) {
+  RegularItem.call(this, item);
+}
+
+function ConjuredItem(item) {
+  RegularItem.call(this, item);
+}
+
 function update_quality() {
   for (var i = 0; i < items.length; i++) {
     if (items[i].name != 'Aged Brie' && items[i].name != 'Backstage passes to a TAFKAL80ETC concert') {
