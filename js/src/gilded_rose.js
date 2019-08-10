@@ -86,6 +86,7 @@ function itemWrapper(item) {
   }
 }
 
+// Remember, Don't move this or breaks tests & spec
 var items = [];
 
 function update_quality() {
