@@ -1,3 +1,5 @@
+import Brie from '../../src/items/Brie';
+
 describe('Initialise Item', () => {
 
   test('We initialise an Item with some values', () => {
