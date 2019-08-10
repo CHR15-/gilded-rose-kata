@@ -2,8 +2,8 @@ import RegularItem from "./RegularItem";
 import { LEGENDARY_QUALITY, MIN_QUALITY } from '../constants';
 
 class Conjured extends RegularItem {
-  constructor(name, sellIn, quality) {
-    super(name, sellIn, quality);
+  constructor(item) {
+    super(item);
   }
 
   // "Conjured" items degrade in Quality twice as fast as normal items

@@ -2,8 +2,8 @@ import RegularItem from "./RegularItem";
 import { DEGRADATION_RATE, MAX_QUALITY, MIN_QUALITY } from '../constants';
 
 class BackstagePasses extends RegularItem {
-  constructor(name, sellIn, quality) {
-    super(name, sellIn, quality)
+  constructor(item) {
+    super(item)
   }
 
   /* Backstage passes, like aged brie, increases in Quality as it's SellIn value approaches;
