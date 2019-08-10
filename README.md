@@ -1,1 +1,56 @@
-# gilded-rose-kata
+# The Gilded Rose
+
+## TL;DR
+
+- Clone the repo
+- Head to `/refactor`
+- Run the unit tests by loading `SpecRunner.html` in the browser
+- Run the integration tests by loading `TexttestFixture.html`
+
+### Introduction
+
+This exercise is pretty interesting as many approaches can be take. On seeing the code, we as engineers immediately want to rip out everything and put it into what we feel is the right implementation. However, there's a few things to note here:
+
+- There's an expectation not to change certain aspects of the implementation
+- We can't change the input of the application (much like having data in a database when porting systems)
+- There are no unit tests (be it unit or integration)
+
+### Direction
+
+First, I wanted to play by the rules. Essentially, we have a test framework given to us with no implementation and a strict ruleset. I've decided to take on the JS project given time constaints and wanting to refresh my knowledge of pre ES6 life. Remember this is a refactor, not a rewrite. I can always do that later when we've completed the task at hand. In my eyes, we're not touching any infrastructure or process running here, it should run exactly the same way it was given to us. As the problem seems highly suited to OOP, I wanted to follow the the inheritance design patterns but ultimately wanted to take note of composition over inheritance. There were a few ways I could think of putting functionality through an interface but given the complexity of prototyping and interfacing in ES5, I stuck with classical inheritance. I see the benefits of OOP as eventually leading to better readbility, maintainability and ultimately structure of code.
+
+Also, timebox it. You can work on a project like this forever, tweaking and finessing... adding coding standards, extracting logic away and enhancing tests... I wanted to keep it inside 4 hours.
+
+### Plan of attack (Refactor)
+
+- [ ] Write tests to prove it currently works minus the missing spec item
+- [ ] Extend the tests to what I think is the right implementation (inheritance and OOP as above)
+- [ ] Write an integration test for the expected results on the given items in the TestFixture
+- [ ] Leave the Item class as it is to adhere to spec and to store our values for a given item 
+- [ ] implement a RegularItem class housing shared behaviour for all classes
+- [ ] Implement extra classes covering all of the items
+- [ ] Use function overriding on the quality for each item so it encapsulates an item's own quality logic
+- [ ] Add some constants for the project as we can see shared references and re-use like degradation and minimum quality
+- [ ] Write a wrapper class to 'migrate' the current items to our new world order
+- [ ] Wipe the update_quality content from the face of the earth, filling it with simplicity
+- [ ] Run the unit tests and fix until they go green
+- [ ] Run the integration tests until they go green
+- [ ] Run the SpecRunner and see if the behaviour matches that of the integration test
+- [ ] Profit.
+
+### For fun if we have time (Rewrite)
+
+- [ ] Port solution to ES6 and change the process runner.
+
+## Lessons learnt
+
+- Use TypeScript next time. Strongly typed languages are a godsend
+- Use Go the time after that. It be an interesting challenge to solve in that language
+- Don't get flustered by having no tests to start with. Just read the spec, write some tests and be happy you now have a trusted base to work out from
+- I originally experimented with prototype functions but very quicky got into a narly hole.
+
+## Todo
+
+- Write more descriptive test descriptions. There were a few times I got confused by my own test documentation.
+- IIFE extract out our old school classes. It feels prehistoric but it's the right thing to do.
+
