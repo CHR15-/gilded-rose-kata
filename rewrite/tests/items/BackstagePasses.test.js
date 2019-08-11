@@ -1,9 +1,9 @@
-import BackstagePasses from '../../src/items/BackstagePasses';
-import { MAX_QUALITY, MIN_QUALITY } from '../../src/constants';
+import BackstagePasses from "../../src/items/BackstagePasses";
+import { MAX_QUALITY, MIN_QUALITY } from "../../src/constants";
 
-describe('Initialise Item', () => {
+describe("Initialise Item", () => {
 
-  test('We initialise an Item with some values', () => {
+  test("We initialise an Item with some values", () => {
     const item = new BackstagePasses(1, 2);
 
     expect(item.name).toEqual("Backstage passes to a TAFKAL80ETC concert");
@@ -17,21 +17,21 @@ describe('Initialise Item', () => {
   });
 });
 
-describe('Item quality behaviour', () => {
+describe("Item quality behaviour", () => {
 
-  test('Quality increases by 2 when there are 10 days or less', () => {
+  test("Quality increases by 2 when there are 10 days or less", () => {
     const item = new BackstagePasses(10, 2);
     item.updateQuality();
     expect(item.quality).toEqual(4);
   });
 
-  test('Quality increases by 3 when there are 5 days or less', () => {
+  test("Quality increases by 3 when there are 5 days or less", () => {
     const item = new BackstagePasses(3, 2);
     item.updateQuality();
     expect(item.quality).toEqual(5);
   });
 
-  test('Quality increases by 3 when there are 5 days or less', () => {
+  test("Quality increases by 3 when there are 5 days or less", () => {
     const item = new BackstagePasses(3, 2);
     item.updateQuality();
     expect(item.quality).toEqual(5);
@@ -53,7 +53,7 @@ describe('Item quality behaviour', () => {
     expect(item.quality).toEqual(MAX_QUALITY);
   });
 
-  test('Passes are worthless after a concert finishes', () => {
+  test("Passes are worthless after a concert finishes", () => {
     // Selling passes on the day of the concert
     const item = new BackstagePasses(0, 10);
 

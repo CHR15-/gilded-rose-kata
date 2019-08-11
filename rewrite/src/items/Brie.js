@@ -1,5 +1,5 @@
 import RegularItem from "./RegularItem";
-import { DEGRADATION_RATE, MAX_QUALITY } from '../constants';
+import { DEGRADATION_RATE, MAX_QUALITY } from "../constants";
 
 class AgedBrie extends RegularItem {
   constructor(item) {

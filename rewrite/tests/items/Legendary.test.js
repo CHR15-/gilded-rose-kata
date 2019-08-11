@@ -1,13 +1,13 @@
-import LegendaryItem from '../../src/items/Legendary';
-import { LEGENDARY_QUALITY } from '../../src/constants';
+import LegendaryItem from "../../src/items/Legendary";
+import { LEGENDARY_QUALITY } from "../../src/constants";
 
 
-describe('Initialise Item', () => {
+describe("Initialise Item", () => {
 
-  test('We initialise an Item with some values', () => {
+  test("We initialise an Item with some values", () => {
     const item = new Legendary(5);
 
-    expect(item.name).toEqual('Sulfuras, Hand of Ragnaros');
+    expect(item.name).toEqual("Sulfuras, Hand of Ragnaros");
     expect(item.sellIn).toEqual(5);
     expect(item.quality).toEqual(LEGENDARY_QUALITY);
 
@@ -18,7 +18,7 @@ describe('Initialise Item', () => {
   });
 });
 
-describe('Item update quality behaviour', () => {
+describe("Item update quality behaviour", () => {
 
   test(`A Legendary will never change in quality`, () => {
     const item = new Legendary(5);

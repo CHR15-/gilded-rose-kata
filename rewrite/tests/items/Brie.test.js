@@ -1,11 +1,11 @@
-import Brie from '../../src/items/Brie';
+import Brie from "../../src/items/Brie";
 
-describe('Initialise Item', () => {
+describe("Initialise Item", () => {
 
-  test('We initialise an Item with some values', () => {
+  test("We initialise an Item with some values", () => {
     const item = new Brie(1, 2);
 
-    expect(item.name).toEqual('Aged Brie');
+    expect(item.name).toEqual("Aged Brie");
     expect(item.sellIn).toEqual(1);
     expect(item.quality).toEqual(2);
 
@@ -16,7 +16,7 @@ describe('Initialise Item', () => {
   });
 });
 
-describe('Item update quality behaviour', () => {
+describe("Item update quality behaviour", () => {
 
   test(`A Brie will mature in quality`, () => {
     const item = new Brie(20, 40);

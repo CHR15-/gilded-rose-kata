@@ -1,5 +1,5 @@
 import RegularItem from "./RegularItem";
-import { DEGRADATION_RATE, MAX_QUALITY, MIN_QUALITY } from '../constants';
+import { DEGRADATION_RATE, MAX_QUALITY, MIN_QUALITY } from "../constants";
 
 class BackstagePasses extends RegularItem {
   constructor(item) {
