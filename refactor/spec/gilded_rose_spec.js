@@ -1,6 +1,6 @@
-describe("Gilded Rose integration test", function() {
+describe("Gilded Rose integration test", function () {
 
-  it("should act like a store!", function() {
+  it("should act like a store!", function () {
     items = [
       new Item("+5 Dexterity Vest", 10, 20),
       new Item("Aged Brie", 2, 0),
@@ -50,5 +50,4 @@ describe("Gilded Rose integration test", function() {
     expect(items[8].quality).toEqual(4);
     expect(items[8].sell_in).toEqual(2);
   });
-
 });

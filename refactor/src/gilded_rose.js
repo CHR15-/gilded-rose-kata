@@ -29,7 +29,7 @@ function RegularItem(item) {
 function AgedBrie(item) {
   RegularItem.call(this, item);
 
-  this.updateQuality = function() {
+  this.updateQuality = function () {
     if (this.quality < MAX_QUALITY) return this.quality += DEGRADATION_RATE;
     return MAX_QUALITY;
   }
@@ -38,7 +38,7 @@ function AgedBrie(item) {
 function LegendaryItem(item) {
   RegularItem.call(this, item);
 
-  this.updateQuality = function() {
+  this.updateQuality = function () {
     return LEGENDARY_QUALITY;
   }
 }
@@ -74,15 +74,15 @@ function ConjuredItem(item) {
 }
 
 function itemWrapper(item) {
-  switch(item.name) {
-    case "Aged Brie":
-      return new AgedBrie(item);
-    case "Sulfuras, Hand of Ragnaros":
-      return new LegendaryItem(item);
-    case "Backstage passes to a TAFKAL80ETC concert":
-      return new BackstagePasses(item);
-    default:
-      return (item.name.indexOf("Conjured") !== -1) ? new ConjuredItem(item) : new RegularItem(item);
+  switch (item.name) {
+  case "Aged Brie":
+    return new AgedBrie(item);
+  case "Sulfuras, Hand of Ragnaros":
+    return new LegendaryItem(item);
+  case "Backstage passes to a TAFKAL80ETC concert":
+    return new BackstagePasses(item);
+  default:
+    return (item.name.indexOf("Conjured") !== -1) ? new ConjuredItem(item) : new RegularItem(item);
   }
 }
 
@@ -94,7 +94,7 @@ function update_quality() {
     return itemWrapper(item);
   });
 
-  for(i = 0; i < items.length; i++) {
+  for (i = 0; i < items.length; i++) {
     items[i].updateItem();
   }
 }
