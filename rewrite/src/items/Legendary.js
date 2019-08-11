@@ -1,5 +1,5 @@
 import RegularItem from "./RegularItem";
-import { LEGENDARY_QUALITY } from '../constants';
+import { LEGENDARY_QUALITY } from "../constants";
 
 class Legendary extends RegularItem {
   constructor(item) {

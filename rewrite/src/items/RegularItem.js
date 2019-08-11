@@ -1,5 +1,5 @@
-import Item from './Item';
-import { DEGRADATION_RATE, MAX_QUALITY, MIN_QUALITY } from '../constants';
+import Item from "./Item";
+import { DEGRADATION_RATE, MAX_QUALITY, MIN_QUALITY } from "../constants";
 
 class RegularItem extends Item {
   constructor(item) {

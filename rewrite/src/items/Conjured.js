@@ -1,5 +1,5 @@
 import RegularItem from "./RegularItem";
-import { LEGENDARY_QUALITY, MIN_QUALITY } from '../constants';
+import { LEGENDARY_QUALITY, MIN_QUALITY } from "../constants";
 
 class Conjured extends RegularItem {
   constructor(item) {
