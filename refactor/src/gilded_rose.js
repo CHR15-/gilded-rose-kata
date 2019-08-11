@@ -75,14 +75,14 @@ function ConjuredItem(item) {
 
 function itemWrapper(item) {
   switch(item.name) {
-    case 'Aged Brie':
+    case "Aged Brie":
       return new AgedBrie(item);
-    case 'Sulfuras, Hand of Ragnaros':
+    case "Sulfuras, Hand of Ragnaros":
       return new LegendaryItem(item);
-    case 'Backstage passes to a TAFKAL80ETC concert':
+    case "Backstage passes to a TAFKAL80ETC concert":
       return new BackstagePasses(item);
     default:
-      return (item.name.indexOf('Conjured') !== -1) ? new ConjuredItem(item) : new RegularItem(item);
+      return (item.name.indexOf("Conjured") !== -1) ? new ConjuredItem(item) : new RegularItem(item);
   }
 }
 
