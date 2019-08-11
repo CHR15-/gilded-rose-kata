@@ -23,20 +23,20 @@ Also, timebox it. You can work on a project like this forever, tweaking and fine
 
 ### Plan of attack (Refactor)
 
-- [ ] Write tests to prove it currently works minus the missing spec item
-- [ ] Extend the tests to what I think is the right implementation (inheritance and OOP as above)
-- [ ] Write an integration test for the expected results on the given items in the TestFixture
-- [ ] Leave the Item class as it is to adhere to spec and to store our values for a given item 
-- [ ] implement a RegularItem class housing shared behaviour for all classes
-- [ ] Implement extra classes covering all of the items
-- [ ] Use function overriding on the quality for each item so it encapsulates an item's own quality logic
-- [ ] Add some constants for the project as we can see shared references and re-use like degradation and minimum quality
-- [ ] Write a wrapper class to 'migrate' the current items to our new world order
-- [ ] Wipe the update_quality content from the face of the earth, filling it with simplicity
-- [ ] Run the unit tests and fix until they go green
-- [ ] Run the integration tests until they go green
-- [ ] Run the SpecRunner and see if the behaviour matches that of the integration test
-- [ ] Profit.
+- [x] Write tests to prove it currently works minus the missing spec item
+- [x] Extend the tests to what I think is the right implementation (inheritance and OOP as above)
+- [x] Write an integration test for the expected results on the given items in the TestFixture
+- [x] Leave the Item class as it is to adhere to spec and to store our values for a given item 
+- [x] implement a RegularItem class housing shared behaviour for all classes
+- [x] Implement extra classes covering all of the items
+- [x] Use function overriding on the quality for each item so it encapsulates an item's own quality logic
+- [x] Add some constants for the project as we can see shared references and re-use like degradation and minimum quality
+- [x] Write a wrapper class to 'migrate' the current items to our new world order
+- [x] Wipe the update_quality content from the face of the earth, filling it with simplicity
+- [x] Run the unit tests and fix until they go green
+- [x] Run the integration tests until they go green
+- [x] Run the SpecRunner and see if the behaviour matches that of the integration test
+- [x] Profit.
 
 ### For fun if we have time (Rewrite)
 
