@@ -5,7 +5,7 @@
 - Clone the repo
 - Head to `/refactor`
 - Run the unit tests by loading `SpecRunner.html` in the browser
-- Run the integration tests by loading `TexttestFixture.html`
+- Run the integration tests by loading `TexttestFixture.html` in the browser
 
 ### Introduction
 
