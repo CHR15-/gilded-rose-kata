@@ -2,10 +2,19 @@
 
 ## TL;DR
 
+### Check the code
+
 - Clone the repo
 - Head to `/refactor`
-- Run the unit tests by loading `SpecRunner.html` in the browser
-- Run the integration tests by loading `TexttestFixture.html` in the browser
+
+### Check the tests (integration and unit)
+
+
+[Unit tests](https://chr15-.github.io/gilded-rose-kata/refactor/SpecRunner.html)
+
+[Integration tests](https://chr15-.github.io/gilded-rose-kata/refactor/TexttestFixture.html)
+
+You can run these tests locally by loading `SpecRunner.html` or `TexttestFixture.html` in the browser.
 
 ### Introduction
 
