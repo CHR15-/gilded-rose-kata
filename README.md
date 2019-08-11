@@ -40,7 +40,9 @@ Also, timebox it. You can work on a project like this forever, tweaking and fine
 
 ### For fun if we have time (Rewrite)
 
-- [ ] Port solution to ES6 and change the process runner.
+- [x] Port solution to ES6 classes 
+- [ ] Fix tests to be more robust and descriptive
+- [ ] Change the process runner and find a more suitable/fun test bed
 
 ## Lessons learnt
 
