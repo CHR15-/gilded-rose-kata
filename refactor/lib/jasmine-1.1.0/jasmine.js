@@ -103,11 +103,11 @@ jasmine.ExpectationResult = function(params) {
   this.trace = this.passed_ ? '' : trace;
 };
 
-jasmine.ExpectationResult.prototype.toString = function () {
+jasmine.ExpectationResult.prototype.toString = function() {
   return this.message;
 };
 
-jasmine.ExpectationResult.prototype.passed = function () {
+jasmine.ExpectationResult.prototype.passed = function() {
   return this.passed_;
 };
 
@@ -723,7 +723,7 @@ jasmine.Env.prototype.clearInterval = jasmine.clearInterval;
 /**
  * @returns an object containing jasmine version build info, if set.
  */
-jasmine.Env.prototype.version = function () {
+jasmine.Env.prototype.version = function() {
   if (jasmine.version_) {
     return jasmine.version_;
   } else {
@@ -751,14 +751,14 @@ jasmine.Env.prototype.versionString = function() {
 /**
  * @returns a sequential integer starting at 0
  */
-jasmine.Env.prototype.nextSpecId = function () {
+jasmine.Env.prototype.nextSpecId = function() {
   return this.nextSpecId_++;
 };
 
 /**
  * @returns a sequential integer starting at 0
  */
-jasmine.Env.prototype.nextSuiteId = function () {
+jasmine.Env.prototype.nextSuiteId = function() {
   return this.nextSuiteId_++;
 };
 
@@ -812,7 +812,7 @@ jasmine.Env.prototype.beforeEach = function(beforeEachFunction) {
   }
 };
 
-jasmine.Env.prototype.currentRunner = function () {
+jasmine.Env.prototype.currentRunner = function() {
   return this.currentRunner_;
 };
 
@@ -996,7 +996,7 @@ jasmine.Block = function(env, func, spec) {
   this.spec = spec;
 };
 
-jasmine.Block.prototype.execute = function(onComplete) {  
+jasmine.Block.prototype.execute = function(onComplete) {
   try {
     this.func.apply(this.spec);
   } catch (e) {
@@ -1036,7 +1036,7 @@ jasmine.JsApiReporter.prototype.summarize_ = function(suiteOrSpec) {
     type: isSuite ? 'suite' : 'spec',
     children: []
   };
-  
+
   if (isSuite) {
     var children = suiteOrSpec.children();
     for (var i = 0; i < children.length; i++) {
@@ -1652,7 +1652,7 @@ jasmine.PrettyPrinter.prototype.format = function(value) {
 jasmine.PrettyPrinter.prototype.iterateObject = function(obj, fn) {
   for (var property in obj) {
     if (property == '__Jasmine_been_here_before__') continue;
-    fn(property, obj.__lookupGetter__ ? (obj.__lookupGetter__(property) !== jasmine.undefined && 
+    fn(property, obj.__lookupGetter__ ? (obj.__lookupGetter__(property) !== jasmine.undefined &&
                                          obj.__lookupGetter__(property) !== null) : false);
   }
 };
@@ -1755,12 +1755,12 @@ jasmine.Queue.prototype.next_ = function() {
 
   while (goAgain) {
     goAgain = false;
-    
+
     if (self.index < self.blocks.length && !this.abort) {
       var calledSynchronously = true;
       var completedSynchronously = false;
 
-      var onComplete = function () {
+      var onComplete = function() {
         if (jasmine.Queue.LOOP_DONT_RECURSE && calledSynchronously) {
           completedSynchronously = true;
           return;
@@ -1793,7 +1793,7 @@ jasmine.Queue.prototype.next_ = function() {
       if (completedSynchronously) {
         onComplete();
       }
-      
+
     } else {
       self.running = false;
       if (self.onComplete) {
@@ -1834,7 +1834,7 @@ jasmine.Runner.prototype.execute = function() {
   if (self.env.reporter.reportRunnerStarting) {
     self.env.reporter.reportRunnerStarting(this);
   }
-  self.queue.start(function () {
+  self.queue.start(function() {
     self.finishCallback();
   });
 };
@@ -1865,7 +1865,7 @@ jasmine.Runner.prototype.add = function(block) {
   this.queue.add(block);
 };
 
-jasmine.Runner.prototype.specs = function () {
+jasmine.Runner.prototype.specs = function() {
   var suites = this.suites();
   var specs = [];
   for (var i = 0; i < suites.length; i++) {
@@ -2067,7 +2067,7 @@ jasmine.Spec.prototype.execute = function(onComplete) {
 
   spec.addBeforesAndAftersToQueue();
 
-  spec.queue.start(function () {
+  spec.queue.start(function() {
     spec.finish(onComplete);
   });
 };
@@ -2212,7 +2212,7 @@ jasmine.Suite.prototype.children = function() {
 
 jasmine.Suite.prototype.execute = function(onComplete) {
   var self = this;
-  this.queue.start(function () {
+  this.queue.start(function() {
     self.finish(onComplete);
   });
 };
@@ -2227,7 +2227,7 @@ jasmine.WaitsBlock.prototype.execute = function (onComplete) {
   if (jasmine.VERBOSE) {
     this.env.reporter.log('>> Jasmine waiting for ' + this.timeout + ' ms...');
   }
-  this.env.setTimeout(function () {
+  this.env.setTimeout(function() {
     onComplete();
   }, this.timeout);
 };

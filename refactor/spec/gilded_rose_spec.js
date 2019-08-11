@@ -50,5 +50,4 @@ describe("Gilded Rose integration test", function() {
     expect(items[8].quality).toEqual(4);
     expect(items[8].sell_in).toEqual(2);
   });
-
 });
